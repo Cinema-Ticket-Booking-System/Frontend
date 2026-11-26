@@ -1,0 +1,136 @@
+[
+  {
+    "id": "hall_01",
+    "name": "IMAX Grand Theater",
+    "code": "HALL 01",
+    "status": "Active",
+    "utilization": 92.4,
+    "totalSeats": 140,
+    "bookableSeats": 139,
+    "features": [
+      "Dolby Atmos 12.1",
+      "4K Laser IMAX",
+      "Standard + VIP D",
+      "1.43:1 Aspect Ratio"
+    ],
+    "curvedScreenLabel": "CURVED IMAX DUAL LASER SCREEN",
+    "specs": {
+      "spacing": "1150 mm",
+      "aisle": "1400 mm",
+      "incline": "18.5\u00b0 Rake"
+    },
+    "pricingTiers": {
+      "STANDARD": {
+        "label": "Standard",
+        "price": 12.0
+      },
+      "VIP_RECLINER": {
+        "label": "VIP Recliner",
+        "price": 18.0
+      },
+      "ADA_ACCESSIBLE": {
+        "label": "ADA Accessible",
+        "price": 12.0
+      }
+    },
+    "matrix": {
+      "rows": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "columns": 16,
+      "aisleAfterColumn": 8
+    },
+    "calculatedMaxGross": 2112.0
+  },
+  {
+    "id": "hall_02",
+    "name": "VIP Lux Lounge",
+    "code": "HALL 02",
+    "status": "Active",
+    "utilization": 88.1,
+    "totalSeats": 48,
+    "bookableSeats": 48,
+    "features": [
+      "Dolby 7.1 Surround",
+      "Dine-in Console",
+      "100% Leather Recliner",
+      "Dual Micro-Lamps"
+    ],
+    "curvedScreenLabel": "ULTRA-WIDE LUX CINEMA SCREEN",
+    "specs": {
+      "spacing": "1400 mm",
+      "aisle": "1600 mm",
+      "incline": "14.0\u00b0 Rake"
+    },
+    "pricingTiers": {
+      "VIP_RECLINER": {
+        "label": "VIP Ultra Recliner",
+        "price": 24.0
+      }
+    },
+    "matrix": {
+      "rows": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "columns": 12,
+      "aisleAfterColumn": 6
+    },
+    "calculatedMaxGross": 1152.0
+  },
+  {
+    "id": "hall_03",
+    "name": "Standard Screen 3",
+    "code": "HALL 03",
+    "status": "Active",
+    "utilization": 76.3,
+    "totalSeats": 96,
+    "bookableSeats": 94,
+    "features": [
+      "7.1 Surround Spe",
+      "Christie CP4325",
+      "Standard Ergo Se",
+      "4 ADA Positions"
+    ],
+    "curvedScreenLabel": "PRECISION FLAT MATTE PROJECTION",
+    "specs": {
+      "spacing": "1000 mm",
+      "aisle": "1200 mm",
+      "incline": "16.0\u00b0 Rake"
+    },
+    "pricingTiers": {
+      "STANDARD": {
+        "label": "Standard Rocker",
+        "price": 10.5
+      },
+      "ADA_ACCESSIBLE": {
+        "label": "ADA Accessible",
+        "price": 10.5
+      }
+    },
+    "matrix": {
+      "rows": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "columns": 12,
+      "aisleAfterColumn": 6
+    },
+    "calculatedMaxGross": 1008.0
+  }
+]

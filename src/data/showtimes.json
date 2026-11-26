@@ -1,0 +1,125 @@
+{
+  "date": "2026-10-24",
+  "timelineWindow": {
+    "startHour": 10,
+    "endHour": 24,
+    "stepMinutes": 30
+  },
+  "kpis": {
+    "scheduledShows": 11,
+    "collisionStatus": "No Collisions",
+    "occupancyPercent": 84.2,
+    "dayGross": 14820,
+    "sanitizationPercent": 100
+  },
+  "halls": [
+    {
+      "hallId": "hall_01",
+      "hallName": "Hall 1",
+      "tag": "IMAX Laser",
+      "capacity": 140,
+      "sessions": [
+        {
+          "id": "sess_101",
+          "movieId": "mov_dune_p2",
+          "movieTitle": "Dune: Part Two",
+          "startTime": "10:30",
+          "endTime": "13:15",
+          "occupancyPercent": 88,
+          "status": "Available",
+          "basePrice": 16.0
+        },
+        {
+          "id": "sess_102",
+          "movieId": "mov_oppenheimer",
+          "movieTitle": "Oppenheimer",
+          "startTime": "13:45",
+          "endTime": "16:45",
+          "occupancyPercent": 95,
+          "status": "Filling",
+          "basePrice": 16.0
+        },
+        {
+          "id": "sess_103",
+          "movieId": "mov_dune_p2",
+          "movieTitle": "Dune: Part Two",
+          "startTime": "17:15",
+          "endTime": "20:00",
+          "occupancyPercent": 100,
+          "status": "Sold Out",
+          "basePrice": 18.5,
+          "grossRevenue": 2590,
+          "foodAndBeverageYield": 420,
+          "vipPodReserve": 8,
+          "cleaningBufferMinutes": 30
+        }
+      ]
+    },
+    {
+      "hallId": "hall_02",
+      "hallName": "Hall 2",
+      "tag": "VIP Lux",
+      "capacity": 64,
+      "sessions": [
+        {
+          "id": "sess_201",
+          "movieId": "mov_dune_p2",
+          "movieTitle": "Dune: Part Two",
+          "startTime": "12:00",
+          "endTime": "14:45",
+          "occupancyPercent": 100,
+          "status": "Sold Out",
+          "basePrice": 24.0
+        },
+        {
+          "id": "sess_202",
+          "movieId": "mov_interstellar",
+          "movieTitle": "Interstellar",
+          "startTime": "15:30",
+          "endTime": "18:00",
+          "occupancyPercent": 82,
+          "status": "Available",
+          "basePrice": 22.0
+        }
+      ]
+    },
+    {
+      "hallId": "hall_03",
+      "hallName": "Hall 3",
+      "tag": "Standard",
+      "capacity": 210,
+      "sessions": [
+        {
+          "id": "sess_301",
+          "movieId": "mov_spiderman",
+          "movieTitle": "Spider-Man",
+          "startTime": "11:00",
+          "endTime": "13:20",
+          "occupancyPercent": 70,
+          "status": "Available",
+          "basePrice": 10.5
+        },
+        {
+          "id": "sess_302",
+          "movieId": "mov_spiderman",
+          "movieTitle": "Spider-Man",
+          "startTime": "14:00",
+          "endTime": "16:20",
+          "occupancyPercent": 85,
+          "status": "Available",
+          "basePrice": 10.5
+        },
+        {
+          "id": "sess_303",
+          "movieId": "mov_dune_p2",
+          "movieTitle": "Dune: Part Two",
+          "startTime": "17:00",
+          "endTime": "19:45",
+          "occupancyPercent": 75,
+          "status": "Available",
+          "basePrice": 10.5
+        }
+      ]
+    }
+  ]
+}

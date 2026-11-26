@@ -1,0 +1,34 @@
+[
+  {
+    "id": "usr_customer_01",
+    "name": "Alex Rivera",
+    "email": "alex.rivera@cinelux.com",
+    "password": "password123",
+    "role": "customer",
+    "phone": "+1 (555) 234-8901",
+    "avatarUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150",
+    "cinePassBalance": 50.0,
+    "token": "mock-jwt-customer-token-xyz123"
+  },
+  {
+    "id": "usr_scanner_01",
+    "name": "Gate Check-In Lead",
+    "email": "checker@cinelux.com",
+    "password": "password123",
+    "role": "scanner",
+    "phone": "+1 (555) 345-6789",
+    "assignedGate": "Turnstile A/B",
+    "token": "mock-jwt-scanner-token-abc456"
+  },
+  {
+    "id": "usr_admin_01",
+    "name": "Alex Vance",
+    "email": "admin@cinelux.com",
+    "password": "password123",
+    "role": "admin",
+    "title": "Super Administrator",
+    "badge": "SuperAdmin #OP-449",
+    "avatarUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150",
+    "token": "mock-jwt-admin-token-super789"
+  }
+]

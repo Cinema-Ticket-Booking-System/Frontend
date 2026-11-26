@@ -1,0 +1,121 @@
+{
+  "systemStatus": {
+    "online": true,
+    "node": "HALL-OPERATIONS-PRIME",
+    "activeHalls": 3,
+    "mode": "Live Operations Active",
+    "date": "2026-10-24"
+  },
+  "kpis": {
+    "totalBookings": {
+      "value": 342,
+      "deltaPercent": 14.8,
+      "subtext": "582 tickets issued"
+    },
+    "confirmedSales": {
+      "value": 2890,
+      "currency": "USD",
+      "deltaAmount": 412,
+      "subtext": "$14.82 avg yield"
+    },
+    "occupancyRate": {
+      "ratePercent": 74,
+      "capacity": 360,
+      "peakTime": "19:30"
+    }
+  },
+  "turnoverAlert": {
+    "movieId": "mov_dune_p2",
+    "movieTitle": "Dune: Part Two",
+    "hall": "Hall 1 \u2022 IMAX",
+    "status": "Turnover clean completed",
+    "subtext": "Gate check-in online (Kiosk #04)",
+    "countdownText": "47m to Reel",
+    "turnstileFlow": {
+      "totalEntries": 214,
+      "flowDistribution": [
+        20,
+        35,
+        65,
+        94
+      ]
+    }
+  },
+  "showtimesOccupancy": [
+    {
+      "id": "st_01",
+      "movieTitle": "Dune: Part Two",
+      "format": "IMAX Atmos",
+      "posterUrl": "/posters/dune-part-two.jpg",
+      "hall": "Hall 1",
+      "time": "19:30",
+      "price": 16.0,
+      "occupancy": {
+        "booked": 84,
+        "total": 120,
+        "percentage": 70
+      },
+      "status": "Filling"
+    },
+    {
+      "id": "st_02",
+      "movieTitle": "Dune: Part Two",
+      "format": "VIP",
+      "posterUrl": "/posters/dune-part-two.jpg",
+      "hall": "Hall 2",
+      "time": "20:30",
+      "price": 24.0,
+      "occupancy": {
+        "booked": 48,
+        "total": 48,
+        "percentage": 100
+      },
+      "status": "Sold Out"
+    },
+    {
+      "id": "st_03",
+      "movieTitle": "Dune: Part Two",
+      "format": "Standard 2D",
+      "posterUrl": "/posters/dune-part-two.jpg",
+      "hall": "Hall 3",
+      "time": "21:30",
+      "price": 10.5,
+      "occupancy": {
+        "booked": 36,
+        "total": 120,
+        "percentage": 30
+      },
+      "status": "Available"
+    },
+    {
+      "id": "st_04",
+      "movieTitle": "Oppenheimer",
+      "format": "70mm",
+      "posterUrl": "/posters/oppenheimer.jpg",
+      "hall": "Hall 1",
+      "time": "15:00",
+      "price": 14.5,
+      "occupancy": {
+        "booked": 112,
+        "total": 120,
+        "percentage": 93
+      },
+      "status": "Filling"
+    },
+    {
+      "id": "st_05",
+      "movieTitle": "Spider-Man: Across the Spider-Verse",
+      "format": "Standard 2D",
+      "posterUrl": "/posters/spiderman.jpg",
+      "hall": "Hall 3",
+      "time": "17:30",
+      "price": 9.5,
+      "occupancy": {
+        "booked": 95,
+        "total": 120,
+        "percentage": 79
+      },
+      "status": "Available"
+    }
+  ]
+}
