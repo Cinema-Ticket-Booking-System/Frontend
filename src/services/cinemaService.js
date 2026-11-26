@@ -12,11 +12,20 @@ const USE_MOCK_API = import.meta.env.VITE_USE_MOCK_API !== "false";
 const delay = (result, ms = 150) =>
   new Promise((resolve) => setTimeout(() => resolve(result), ms));
 
+// In-memory store for users created via mock registration during the session
+const registeredMockUsers = [];
+
+function sanitizeUser(user) {
+  const safeUser = { ...user };
+  delete safeUser.password;
+  return safeUser;
+}
+
 export const cinemaService = {
   // --- Users & Auth ---
   async getUsers() {
     if (USE_MOCK_API) {
-      return delay([...usersData]);
+      return delay([...usersData, ...registeredMockUsers]);
     }
     const { data } = await apiClient.get("/users");
     return data;
@@ -25,18 +34,60 @@ export const cinemaService = {
   async login(credentials = {}) {
     if (USE_MOCK_API) {
       const { email, password } = credentials;
-      const matched = usersData.find(
+      const allUsers = [...usersData, ...registeredMockUsers];
+      const matched = allUsers.find(
         (u) =>
-          u.email.toLowerCase() === String(email || "").toLowerCase() &&
+          u.email.toLowerCase() ===
+            String(email || "")
+              .trim()
+              .toLowerCase() &&
           (!password || u.password === password),
       );
       if (!matched) {
         return Promise.reject(new Error("Invalid email or password"));
       }
-      const { password: _pwd, ...safeUser } = matched;
-      return delay({ user: safeUser, token: matched.token });
+      return delay({ user: sanitizeUser(matched), token: matched.token });
     }
     const { data } = await apiClient.post("/auth/login", credentials);
+    return data;
+  },
+
+  async register(payload = {}) {
+    if (USE_MOCK_API) {
+      const name = String(payload.name || "").trim();
+      const email = String(payload.email || "")
+        .trim()
+        .toLowerCase();
+      const password = String(payload.password || "");
+
+      if (!name || !email || !password) {
+        return Promise.reject(
+          new Error("Full name, email, and password are required."),
+        );
+      }
+
+      const allUsers = [...usersData, ...registeredMockUsers];
+      const exists = allUsers.some((u) => u.email.toLowerCase() === email);
+      if (exists) {
+        return Promise.reject(
+          new Error("An account with this email already exists."),
+        );
+      }
+
+      const newUser = {
+        id: `usr_customer_${Date.now()}`,
+        name,
+        email,
+        password,
+        role: "customer",
+        phone: payload.phone || "",
+        cinePassBalance: 25.0,
+        token: `mock-jwt-customer-${Date.now()}`,
+      };
+      registeredMockUsers.push(newUser);
+      return delay({ user: sanitizeUser(newUser), token: newUser.token });
+    }
+    const { data } = await apiClient.post("/auth/register", payload);
     return data;
   },
 

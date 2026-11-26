@@ -1,10 +1,8 @@
-import React from 'react';
-import { Outlet, Link, useLocation } from 'react-router-dom';
-import { Search, Film, Ticket, User } from 'lucide-react';
+import React from "react";
+import { Outlet, Link, NavLink } from "react-router-dom";
+import { Search, Film, Ticket, User } from "lucide-react";
 
 export default function CustomerLayout() {
-  const location = useLocation();
-
   return (
     <div className="min-h-screen bg-[#0B0E14] text-slate-100 flex flex-col font-sans">
       {/* Top Navbar */}
@@ -15,27 +13,37 @@ export default function CustomerLayout() {
               C
             </span>
             <span className="font-bold text-xl tracking-wider text-slate-100">
-              CINE<span className="text-amber-500">LUX</span>
+              Cine<span className="text-amber-500">Lux</span>
             </span>
           </Link>
 
-          <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
-            <Link
-              to="/"
-              className={`transition hover:text-amber-400 ${
-                location.pathname === '/' ? 'text-amber-500' : 'text-slate-400'
-              }`}
+          <nav className="hidden md:flex items-center gap-2 text-sm font-medium">
+            <NavLink
+              to="/now-showing"
+              end
+              className={({ isActive }) =>
+                `rounded-md px-3 py-2 transition-colors ${
+                  isActive
+                    ? "bg-amber-500/10 text-amber-400 ring-1 ring-amber-500/30"
+                    : "text-slate-400 hover:bg-slate-800/60 hover:text-slate-100"
+                }`
+              }
             >
               Now Showing
-            </Link>
-            <Link
+            </NavLink>
+
+            <NavLink
               to="/coming-soon"
-              className={`transition hover:text-amber-400 ${
-                location.pathname === '/coming-soon' ? 'text-amber-500' : 'text-slate-400'
-              }`}
+              className={({ isActive }) =>
+                `rounded-md px-3 py-2 transition-colors ${
+                  isActive
+                    ? "bg-amber-500/10 text-amber-400 ring-1 ring-amber-500/30"
+                    : "text-slate-400 hover:bg-slate-800/60 hover:text-slate-100"
+                }`
+              }
             >
               Coming Soon
-            </Link>
+            </NavLink>
           </nav>
         </div>
 
@@ -74,7 +82,8 @@ export default function CustomerLayout() {
 
       {/* Simplified Footer */}
       <footer className="border-t border-slate-800 py-6 text-center text-xs text-slate-600 bg-[#0B0E14]">
-        © 2026 CineLux Multiplex Theatres. Encrypted Cinematic Identity Services.
+        © 2026 CineLux Multiplex Theatres. Encrypted Cinematic Identity
+        Services.
       </footer>
     </div>
   );

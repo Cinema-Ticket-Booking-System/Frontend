@@ -52,7 +52,7 @@
 | T-01 | Ra Vattra | Core & Customer Booking | W1: Foundation | Week 1 | Global | Vite + React + Tailwind Dark System | Scaffold Vite, React, Tailwind dark tokens (`#0B0E14`, `#111622`, `#F59E0B`), Inter & JetBrains Mono fonts | High | `main` | Done | Core repository baseline & theme tokens |
 | T-02 | Ra Vattra | Core & Customer Booking | W1: Foundation | Week 1 | Global | Router & AuthContext (RBAC) | Configure `react-router-dom` layouts, AuthContext (Customer, Scanner, Admin), and `ProtectedRoute` | High | `main` | Done | Role-based access routing skeleton |
 | T-03 | Ra Vattra | Core & Customer Booking | W1: Foundation | Week 1 | Global | Mock JSON Schemas & Service Layer | Define `movie.json`, `seats.json`, `bookings.json` contracts and `VITE_USE_MOCK_API` service switcher | High | `main` | Done | Addresses FIX-02 shared pricing baseline |
-| T-04 | Ra Vattra | Core & Customer Booking | W2: Mock UI | Week 2 | `/login` | Sign In & Auth Screen | Dual Sign In/Register tabs, password toggle, Remember me, 3 Demo Fast Roles auto-fill; fix white logo contrast | High | `feat/auth-customer-flow` | Not Started | Addresses FIX-01 dark contrast bug |
+| T-04 | Ra Vattra | Core & Customer Booking | W2: Mock UI | Week 2 | `/login` | Sign In & Auth Screen | Dual Sign In/Register tabs, password toggle, Remember me, 3 Demo Fast Roles auto-fill; fix white logo contrast | High | `feat/auth-customer-flow` | In Review | Addresses FIX-01 dark contrast bug |
 | T-05 | Ra Vattra | Core & Customer Booking | W3: Mock UI | Week 3 | Shared | Reusable SeatGrid Engine | Build 2D seat matrix supporting `mode="booking" \| "editor"`, center aisle, pricing tiers, and 5 seat states | High | `feat/auth-customer-flow` | Not Started | Shared component reused in T-24 |
 | T-06 | Ra Vattra | Core & Customer Booking | W3: Mock UI | Week 3 | `/showtimes/:id/seats` | Customer Seat Selection Screen | Integrate `SeatGrid` (booking mode), curved IMAX screen header, tier legend, sticky bar & `calculateOrderTotals()` | High | `feat/auth-customer-flow` | Not Started | Addresses FIX-02 Seat Selection total |
 | T-07 | Ra Vattra | Core & Customer Booking | W4: Mock UI | Week 4 | `/checkout` | Checkout & Payment Screen | 4-step progress header, live 5-min hold timer bar, delivery form, Card/Wallet/CinePass mock payment, order summary | High | `feat/auth-customer-flow` | Not Started | Addresses FIX-02 checkout pricing sync |
@@ -86,7 +86,7 @@
 
 | Fix ID | Owner | Screen / Route | Issue Description | Required Fix & Technical Implementation | Status | Target Week & Notes |
 | --- | --- | --- | --- | --- | --- | --- |
-| FIX-01 | Ra Vattra | `/login` | White `'CINE'` text invisible on white outer background | Apply `#0B0E14` dark theme background across full viewport and ensure high-contrast gold/white brand typography | Open | Week 2 (`feat/auth-customer-flow`) |
+| FIX-01 | Ra Vattra | `/login` | White `'CINE'` text invisible on white outer background | Apply `#0B0E14` dark theme background across full viewport and ensure high-contrast gold/white brand typography | Fixed | Week 2 (`feat/auth-customer-flow`) |
 | FIX-02 | Ra Vattra | `/showtimes/:id/seats` & `/checkout` | Total mismatch (`$34.40` on Seat Selection vs `$37.24` on Checkout) | Centralize calculation in shared `calculateOrderTotals()` utility; guarantee identical pricing across booking & payment | Open | Week 4 (`feat/auth-customer-flow`) |
 | FIX-03 | Yanpich | `/admin/dashboard` | Blue bar overflows vertically over `'Cap: 360'` in Occupancy Rate KPI | Replace with contained horizontal progress bar with strict `overflow-hidden` and relative height bounds | Open | Week 2 (`feat/admin-management`) |
 | FIX-04 | Yanpich | `/admin/bookings` | Live Ticket Inspector duplicates customer/payment block at top with broken spacing | Remove top duplicate customer block; keep clean bottom summary with `qrcode.react` and action buttons | Open | Week 4 (`feat/admin-management`) |
@@ -98,7 +98,7 @@
 
 | Endpoint ID | Owner | Service File | Mock JSON File | Method & Endpoint | Target Week | Mock Ready | API Connected |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| API-01 | Ra Vattra | `authService.js` | `users.json` | `POST /api/v1/auth/login` & `/register` | Week 5 | Pending | Not Started |
+| API-01 | Ra Vattra | `authService.js` | `users.json` | `POST /api/v1/auth/login` & `/register` | Week 5 | Ready | Not Started |
 | API-02 | Sam Visal | `movieService.js` | `movies.json` | `GET /api/v1/movies` (search, genre, status) | Week 5 | Ready | Not Started |
 | API-03 | Sam Visal | `movieService.js` | `movies.json` | `GET /api/v1/movies/:id` & `/showtimes` | Week 5 | Pending | Not Started |
 | API-04 | Ra Vattra | `seatService.js` | `seats.json` | `GET /api/v1/showtimes/:id/seats` | Week 5 | Ready | Not Started |

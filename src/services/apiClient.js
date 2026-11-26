@@ -9,7 +9,9 @@ const apiClient = axios.create({
 });
 
 apiClient.interceptors.request.use((config) => {
-  const token = localStorage.getItem("cinelux_token");
+  const token =
+    localStorage.getItem("cinelux_token") ||
+    sessionStorage.getItem("cinelux_token");
   if (token) {
     config.headers.Authorization = `Bearer ${token}`;
   }
