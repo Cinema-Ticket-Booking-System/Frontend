@@ -1,0 +1,36 @@
+[
+  {
+    "orderId": "BK-88419",
+    "holdCode": "#HLD-84920",
+    "ticketCode": "TCK-88419-IMX",
+    "source": "POS-WEB-01",
+    "status": "CONFIRMED",
+    "customer": {
+      "name": "Samantha Laurent",
+      "email": "s.laurent@cinevault.io",
+      "phone": "+1 (555) 234-8901"
+    },
+    "movieTitle": "Dune: Part Two",
+    "format": "IMAX 70MM",
+    "hall": "Hall 01",
+    "showtime": "17:15",
+    "seats": ["D5", "D6"],
+    "pricingBreakdown": {
+      "subtotal": 32.0,
+      "imaxSurcharge": 2.0,
+      "serviceFee": 0.4,
+      "tax": 2.84,
+      "total": 37.24
+    },
+    "payment": {
+      "method": "Simulated Card",
+      "transactionId": "TXN-CARD-99042",
+      "gateway": "Stripe"
+    },
+    "gateValidation": {
+      "validated": true,
+      "timestamp": "17:04:12",
+      "turnstile": "Turnstile B"
+    }
+  }
+]

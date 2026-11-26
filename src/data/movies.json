@@ -1,0 +1,53 @@
+[
+  {
+    "id": "mov_dune_p2",
+    "title": "Dune: Part Two",
+    "slug": "dune-part-two",
+    "posterUrl": "/posters/dune-part-two.jpg",
+    "durationMinutes": 166,
+    "director": "Denis Villeneuve",
+    "rating": "PG-13",
+    "rottenTomatoesScore": 93,
+    "genres": ["Sci-Fi", "Adventure"],
+    "formats": ["IMAX Dual Laser", "Dolby Atmos", "70mm"],
+    "status": "NOW_SHOWING",
+    "releaseDate": "2024-03-01",
+    "grossVelocity": 142850,
+    "avgOccupancyRate": 94.2,
+    "synopsis": "Paul Atreides unites with Chani and the Fremen while seeking revenge against the conspirators who destroyed his family."
+  },
+  {
+    "id": "mov_oppenheimer",
+    "title": "Oppenheimer",
+    "slug": "oppenheimer",
+    "posterUrl": "/posters/oppenheimer.jpg",
+    "durationMinutes": 180,
+    "director": "Christopher Nolan",
+    "rating": "R",
+    "rottenTomatoesScore": 93,
+    "genres": ["Biography", "Drama", "Historical"],
+    "formats": ["70mm", "IMAX"],
+    "status": "NOW_SHOWING",
+    "releaseDate": "2023-07-21",
+    "grossVelocity": 98400,
+    "avgOccupancyRate": 82.1,
+    "synopsis": "The story of American scientist J. Robert Oppenheimer and his role in the development of the atomic bomb."
+  },
+  {
+    "id": "mov_furiosa",
+    "title": "Furiosa: A Mad Max Saga",
+    "slug": "furiosa-a-mad-max-saga",
+    "posterUrl": "/posters/furiosa.jpg",
+    "durationMinutes": 148,
+    "director": "George Miller",
+    "rating": "R",
+    "rottenTomatoesScore": 90,
+    "genres": ["Action", "Sci-Fi"],
+    "formats": ["4DX", "Dolby Atmos"],
+    "status": "COMING_SOON",
+    "releaseDate": "2024-05-24",
+    "grossVelocity": 28420,
+    "avgOccupancyRate": 0,
+    "synopsis": "Snatched from the Green Place of Many Mothers, young Furiosa falls into the hands of a great Biker Horde led by the Warlord Dementus."
+  }
+]

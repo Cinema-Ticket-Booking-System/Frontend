@@ -1,0 +1,25 @@
+{
+  "showtimeId": "st_1024_01",
+  "hallId": "hall_01_imax",
+  "hallName": "Auditorium 1 — Dual IMAX Laser",
+  "showtimeLabel": "Today, Oct 24 • 19:30",
+  "holdDurationSeconds": 300,
+  "matrix": {
+    "rows": ["A", "B", "C", "D", "E", "F", "G", "H"],
+    "columns": 12,
+    "aisleAfterColumn": 6
+  },
+  "pricingTiers": {
+    "STANDARD": { "label": "Standard Rocker", "price": 14.50 },
+    "SWEET_SPOT": { "label": "Dolby Atmos Sweet Spot", "price": 16.00 },
+    "VIP_RECLINER": { "label": "VIP Ultra Recliner", "price": 18.00 }
+  },
+  "seats": [
+    { "id": "D5", "row": "D", "col": 5, "tier": "SWEET_SPOT", "price": 16.00, "status": "AVAILABLE", "accessible": false },
+    { "id": "D6", "row": "D", "col": 6, "tier": "SWEET_SPOT", "price": 16.00, "status": "AVAILABLE", "accessible": false },
+    { "id": "B4", "row": "B", "col": 4, "tier": "SWEET_SPOT", "price": 16.00, "status": "HELD", "accessible": false },
+    { "id": "B5", "row": "B", "col": 5, "tier": "SWEET_SPOT", "price": 16.00, "status": "HELD", "accessible": false },
+    { "id": "A5", "row": "A", "col": 5, "tier": "STANDARD", "price": 14.50, "status": "SOLD", "accessible": false },
+    { "id": "C1", "row": "C", "col": 1, "tier": "STANDARD", "price": 14.50, "status": "AVAILABLE", "accessible": true }
+  ]
+}
