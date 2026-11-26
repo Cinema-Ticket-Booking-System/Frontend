@@ -1,16 +1,50 @@
-# React + Vite
+# CineLux — Cinema Ticket Booking System (React.js Frontend)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Frontend web application for **CineLux Multiplex Theatres**, covering public movie discovery, interactive seat selection, checkout & digital QR passes, and an admin operations console.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Framework:** React 19 + Vite 8
+- **Styling:** Tailwind CSS v4 (`@tailwindcss/vite`)
+- **Routing:** React Router v7 (`react-router-dom`)
+- **Icons:** `lucide-react`
+- **Planned Integrations:** `axios`, `@tanstack/react-query`, `qrcode.react`
 
-## React Compiler
+## Getting Started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+npm install
+npm run dev
+```
 
-## Expanding the ESLint configuration
+### Environment Variables
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Copy `.env.example` to `.env` to configure mock vs. live REST API mode:
+
+```env
+VITE_USE_MOCK_API=true
+VITE_API_BASE_URL=http://localhost:8000/api/v1
+```
+
+## Scripts
+
+- `npm run dev` — Start Vite dev server
+- `npm run build` — Production build
+- `npm run lint` — Run ESLint
+- `npm run preview` — Preview production build
+
+## Project Structure
+
+- `src/layouts/` — `CustomerLayout`, `AdminLayout`, `AuthLayout`
+- `src/components/common/` — `ProtectedRoute` and shared components
+- `src/pages/` — Customer, Auth, and Admin screens (currently routed via `Placeholder.jsx`)
+- `src/services/` — `apiClient.js` and `cinemaService.js` (`VITE_USE_MOCK_API` switcher)
+- `src/data/` — Mock JSON contracts (`movies.json`, `seats.json`, `bookings.json`)
+- `src/utils/` — `pricingCalculator.js` (`calculateOrderTotals`)
+
+## Task Tracking
+
+Project progress, sprint roadmap, Figma fixes, and REST API endpoints are tracked in Google Sheets and mirrored in [`docs/TASK_TRACKER.md`](./docs/TASK_TRACKER.md):
+
+- **Google Sheet:** [CineLux React.js Frontend Task Tracker](https://docs.google.com/spreadsheets/d/1n_91on4gb-CKNwX8X_k8Yg1P_7hSlfo8hfW_f7Uqisk/edit)
+- **Spreadsheet ID:** `1n_91on4gb-CKNwX8X_k8Yg1P_7hSlfo8hfW_f7Uqisk`
