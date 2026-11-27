@@ -8,6 +8,7 @@ import ProtectedRoute from "./components/common/ProtectedRoute";
 import Placeholder from "./pages/Placeholder";
 import LoginPage from "./pages/auth/LoginPage";
 import SeatGridPreview from "./pages/customer/SeatGridPreview";
+import SeatSelectionPage from "./pages/customer/SeatSelectionPage";
 
 export default function App() {
   return (
@@ -59,9 +60,7 @@ export default function App() {
             />
             <Route
               path="/showtimes/:id/seats"
-              element={
-                <Placeholder title="Seat Selection Grid" owner="Ra Vattra" />
-              }
+              element={<SeatSelectionPage />}
             />
             <Route path="/dev/seat-grid" element={<SeatGridPreview />} />
             <Route
