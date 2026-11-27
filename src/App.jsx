@@ -7,6 +7,7 @@ import AuthLayout from "./layouts/AuthLayout";
 import ProtectedRoute from "./components/common/ProtectedRoute";
 import Placeholder from "./pages/Placeholder";
 import LoginPage from "./pages/auth/LoginPage";
+import SeatGridPreview from "./pages/customer/SeatGridPreview";
 
 export default function App() {
   return (
@@ -62,6 +63,7 @@ export default function App() {
                 <Placeholder title="Seat Selection Grid" owner="Ra Vattra" />
               }
             />
+            <Route path="/dev/seat-grid" element={<SeatGridPreview />} />
             <Route
               path="/checkout"
               element={

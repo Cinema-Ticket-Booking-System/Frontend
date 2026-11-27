@@ -19,3 +19,4 @@ The shared source of truth for sprint tasks, Figma fixes, and API integration st
    - Update only the narrowest target cell(s) in the Google Sheet using `gsheets mutate write` (or `gsheets mutate batch`) — never overwrite summary formula cells (`Overview & Progress`, header KPI formulas).
    - Refresh `docs/TASK_TRACKER.md` to match the updated Google Sheet.
 3. **Safety:** Never run destructive `gsheets` commands (`delete`, `delete-sheet`, `delete-rows`, `delete-cols`, `clear`) unless the user explicitly requests it.
+4. **Status changes are MANUAL (AI must not write them):** AI agents must **never** change a task's status (`Not Started` / `In Progress` / `In Review` / `Done`) in the Google Sheet or in `docs/TASK_TRACKER.md`. Status is owned by the human developer and is updated by hand only. AI may report a suggested status in its response, but must leave the tracker cells untouched.

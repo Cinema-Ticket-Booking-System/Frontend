@@ -4,6 +4,7 @@
 - **Spreadsheet ID:** `1n_91on4gb-CKNwX8X_k8Yg1P_7hSlfo8hfW_f7Uqisk`
 - **Figma File:** [Cinema-Page](https://www.figma.com/design/my4V8oncIa4rgg2yYUEXD8/Cinema-Page?node-id=0-1) (`fileKey`: `my4V8oncIa4rgg2yYUEXD8`)
 - **Last Synced:** 2026-11-26
+- **Status Ownership:** Task statuses are **manual only** — AI agents must not edit status cells here or in the Google Sheet; they only report a suggested status.
 - **Stack:** Vite • Tailwind CSS • React Router • Axios • TanStack Query • Lucide • `qrcode.react`
 
 ---
@@ -14,7 +15,7 @@
 | --- | --- | --- |
 | Total Tasks | 30 | Master Tasks (`T-01`–`T-30`) |
 | Completed | 3 | `T-01`, `T-02`, `T-03` |
-| In Progress | 0 | — |
+| In Progress | 1 | `T-05` (In Review) |
 | Overall Progress | 10.0% | 3 / 30 |
 | Total Screens | 11 | 11 Mapped Routes |
 | Roadmap Duration | 6 Weeks | 6-Week Sprint Cycle |
@@ -25,10 +26,10 @@
 
 | Teammate | Role & Track Assignment | Total Tasks | Completed | In Progress | Not Started | Completion % | Work Status |
 | --- | --- | ---: | ---: | ---: | ---: | ---: | --- |
-| Ra Vattra | Core Setup & Customer Flow | 11 | 3 | 0 | 8 | 27.3% | In Progress |
+| Ra Vattra | Core Setup & Customer Flow | 11 | 3 | 1 | 7 | 27.3% | In Progress |
 | Yanpich | Admin Core Management | 9 | 0 | 0 | 9 | 0.0% | Not Started |
 | Sam Visal | Movie Discovery & Admin Ops | 10 | 0 | 0 | 10 | 0.0% | Not Started |
-| **Total / Overall** | **All Frontend Tracks** | **30** | **3** | **0** | **27** | **10.0%** | **In Progress** |
+| **Total / Overall** | **All Frontend Tracks** | **30** | **3** | **1** | **26** | **10.0%** | **In Progress** |
 
 ---
 
@@ -53,7 +54,7 @@
 | T-02 | Ra Vattra | Core & Customer Booking | W1: Foundation | Week 1 | Global | Router & AuthContext (RBAC) | Configure `react-router-dom` layouts, AuthContext (Customer, Scanner, Admin), and `ProtectedRoute` | High | `main` | Done | Role-based access routing skeleton |
 | T-03 | Ra Vattra | Core & Customer Booking | W1: Foundation | Week 1 | Global | Mock JSON Schemas & Service Layer | Define `movie.json`, `seats.json`, `bookings.json` contracts and `VITE_USE_MOCK_API` service switcher | High | `main` | Done | Addresses FIX-02 shared pricing baseline |
 | T-04 | Ra Vattra | Core & Customer Booking | W2: Mock UI | Week 2 | `/login` | Sign In & Auth Screen | Dual Sign In/Register tabs, password toggle, Remember me, 3 Demo Fast Roles auto-fill; fix white logo contrast | High | `feat/auth-customer-flow` | In Review | Addresses FIX-01 dark contrast bug |
-| T-05 | Ra Vattra | Core & Customer Booking | W3: Mock UI | Week 3 | Shared | Reusable SeatGrid Engine | Build 2D seat matrix supporting `mode="booking" \| "editor"`, center aisle, pricing tiers, and 5 seat states | High | `feat/auth-customer-flow` | Not Started | Shared component reused in T-24 |
+| T-05 | Ra Vattra | Core & Customer Booking | W3: Mock UI | Week 3 | Shared | Reusable SeatGrid Engine | Build 2D seat matrix supporting `mode="booking" \| "editor"`, center aisle, pricing tiers, and 5 seat states | High | `feat/auth-customer-flow` | In Review | Shared component reused in T-24; `src/components/seats/SeatGrid.jsx` + `seatStates.js` |
 | T-06 | Ra Vattra | Core & Customer Booking | W3: Mock UI | Week 3 | `/showtimes/:id/seats` | Customer Seat Selection Screen | Integrate `SeatGrid` (booking mode), curved IMAX screen header, tier legend, sticky bar & `calculateOrderTotals()` | High | `feat/auth-customer-flow` | Not Started | Addresses FIX-02 Seat Selection total |
 | T-07 | Ra Vattra | Core & Customer Booking | W4: Mock UI | Week 4 | `/checkout` | Checkout & Payment Screen | 4-step progress header, live 5-min hold timer bar, delivery form, Card/Wallet/CinePass mock payment, order summary | High | `feat/auth-customer-flow` | Not Started | Addresses FIX-02 checkout pricing sync |
 | T-08 | Ra Vattra | Core & Customer Booking | W4: Mock UI | Week 4 | `/my-tickets` | My Tickets & Digital QR Pass | Upcoming/past tickets list, QR boarding pass render, gate status badge, Wallet pass download button | Medium | `feat/auth-customer-flow` | Not Started | Customer ticket wallet & verification |
